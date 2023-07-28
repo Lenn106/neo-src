@@ -1,45 +1,153 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>SineWize</title>
-    <link rel="icon" href="icon.png" type="image/png">
-    <style>
-      @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300, 400");
-      @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-      iframe {
-        position:absolute;
-        top:-150px;
-        border:none;
-      }
-      body {
-        background-color: #935d8c;
-        background-image: url(https://optifinesource.co.uk/assets/img/overlay.png), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-        font-weight: 300;
-        background-attachment: fixed;
-      }
-      html,*{
-        color: white;
-        border-color: white;
-        background-color:rgba(0,0,0,0);
-        transition: .3s ease-out;
-        outline:none;
-      }
-      div {
-        border: 1px solid white;
-        border-radius:10px;
-      }
-    </style>
-  </head>
-  <body>
-    <iframe id="iframe" src="https://autologout.linewize.net/"></iframe>
-    <h1>This Is SineWize Home Page!</h1>
-    <p>Keep me open for unblock</p>
-  </body>
-  <script type="text/javascript">
-    function test() {
-      document.getElementById('iframe').src="https://autologout.linewize.net/?"+new Date().getTime();
-      setTimeout(function(){test()},2000);
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neo - Login</title>
+  <style>
+    body {
+      background-image: url('https://i.redd.it/ddnm7kmznqd71.gif');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: rgba(0, 0, 0, 0.7); /* Adding shading effect to the background */
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
     }
-    test();
-  </script>
+    .top-footer, .bottom-footer {
+      background-color: #333;
+      padding: 30px; /* Bigger top and bottom footer */
+      text-align: center;
+      font-size: 18px; /* Increased font size for footers */
+    }
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+    .footer a:hover {
+      text-decoration: none;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr; /* Adjusting the width of the "Latest Updates" and "Join Our Community" containers */
+      gap: 20px;
+      justify-items: center;
+      align-items: center;
+      min-height: calc(100vh - 200px); /* Adjusting container height to fill the available space */
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Adding subtle glow effect to the containers */
+      position: relative;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 40px auto;
+      background-color: transparent; /* Removing solid color background */
+    }
+    .patch-notes,
+    .discord-server,
+    .login-box {
+      padding: 30px; /* Increase padding for a better look */
+      border-radius: 20px; /* Make all containers slightly rounder */
+      text-align: center;
+      background-color: #444; /* Adjusting the background color */
+      color: #fff; /* Set text color inside the containers */
+      font-size: 18px; /* Slightly larger font size */
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 12px; /* Increase padding for a better look */
+      border: 2px solid #fff; /* Slightly thicker border */
+      border-radius: 5px;
+      background-color: #111; /* Darker background color */
+      color: #fff;
+      box-sizing: border-box;
+      font-size: 16px; /* Slightly larger font size */
+    }
+    .form-group button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      background-color: #FF1493;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .form-group button:hover {
+      background-color: #FF1493;
+      background-image: linear-gradient(to right, #FF1493, #FF69B4);
+      background-size: 200% 100%;
+      animation: rainbow 2s linear infinite;
+    }
+    @keyframes rainbow {
+      0%, 100% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 100% 0;
+      }
+    }
+    .footer {
+      padding: 30px; /* Increased padding for the bottom footer */
+      text-align: center;
+      font-size: 18px; /* Increased font size for the bottom footer */
+      background-color: #333;
+      color: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1; /* Ensuring footer is above the content */
+    }
+  </style>
+</head>
+<body>
+  <div class="top-footer">
+    <a href="#" style="color: #fff; text-decoration: none;">GitHub</a> | <a href="#" style="color: #fff; text-decoration: none;">Discord</a>
+  </div>
+
+  <div class="container">
+    <div class="patch-notes">
+      <h2>Latest Updates</h2>
+      <p>This is where you can find the latest updates and changes to Neo.</p>
+    </div>
+
+    <div class="login-box">
+      <h2>Neo - Login</h2>
+      <form action="#" method="post">
+        <div class="form-group">
+          <input aria-label="Enter Username" placeholder="Enter username" id="username" name="username" type="text" class="node_modules--cainc-cauliflower-src-components-formfield-___FormField__form-control" value="">
+        </div>
+        <div class="form-group">
+          <input aria-label="Enter Password" placeholder="Enter password" id="password" name="password" type="password" class="node_modules--cainc-cauliflower-src-components-formfield-___FormField__form-control" value="">
+        </div>
+        <div class="form-group">
+          <input aria-label="Enter State" placeholder="State" id="state" name="state" type="text" class="node_modules--cainc-cauliflower-src-components-formfield-___FormField__form-control" value="">
+        </div>
+        <div class="form-group">
+          <button type="submit">Go</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="discord-server">
+      <h2>Join Our Community</h2>
+      <p>Connect with other Neo users and get support.</p>
+    </div>
+  </div>
+
+  <div class="bottom-footer footer">
+    &copy; 2023 Neo. All rights reserved.
+  </div>
+</body>
 </html>
