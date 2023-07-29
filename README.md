@@ -1,4 +1,2 @@
-# sinewize
-Anti-linewize
-Simply Open https://texrextex.github.io/sinewize/ and keep it open!
-It doesn't need to be the selected page, just keep it open in the background.
+# Neo
+The description doesnt matter cause this repo is private so just yall can seeee
