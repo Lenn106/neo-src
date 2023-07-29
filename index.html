@@ -10,7 +10,7 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      background-color: rgba(0, 0, 0, 0.7); /* Adding shading effect to the background */
+      background-color: rgba(0, 0, 0, 0.7);
       color: #fff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
@@ -18,9 +18,9 @@
     }
     .top-footer, .bottom-footer {
       background-color: #333;
-      padding: 30px; /* Bigger top and bottom footer */
+      padding: 30px;
       text-align: center;
-      font-size: 18px; /* Increased font size for footers */
+      font-size: 18px;
     }
     .footer a {
       color: #fff;
@@ -32,28 +32,28 @@
     }
     .container {
       display: grid;
-      grid-template-columns: 1fr 2fr 1fr; /* Adjusting the width of the "Latest Updates" and "Join Our Community" containers */
+      grid-template-columns: 1fr 2fr 1fr;
       gap: 20px;
       justify-items: center;
       align-items: center;
-      min-height: calc(100vh - 200px); /* Adjusting container height to fill the available space */
+      min-height: calc(100vh - 200px);
       border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Adding subtle glow effect to the containers */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       position: relative;
       padding: 20px;
       max-width: 1000px;
       margin: 40px auto;
-      background-color: transparent; /* Removing solid color background */
+      background-color: transparent;
     }
     .patch-notes,
     .discord-server,
     .login-box {
-      padding: 30px; /* Increase padding for a better look */
-      border-radius: 20px; /* Make all containers slightly rounder */
+      padding: 30px;
+      border-radius: 20px;
       text-align: center;
-      background-color: #444; /* Adjusting the background color */
-      color: #fff; /* Set text color inside the containers */
-      font-size: 18px; /* Slightly larger font size */
+      background-color: #444;
+      color: #fff;
+      font-size: 18px;
     }
     .form-group {
       margin-bottom: 20px;
@@ -65,13 +65,13 @@
     }
     .form-group input {
       width: 100%;
-      padding: 12px; /* Increase padding for a better look */
-      border: 2px solid #fff; /* Slightly thicker border */
+      padding: 12px;
+      border: 2px solid #fff;
       border-radius: 5px;
-      background-color: #111; /* Darker background color */
+      background-color: #111;
       color: #fff;
       box-sizing: border-box;
-      font-size: 16px; /* Slightly larger font size */
+      font-size: 16px;
     }
     .form-group button {
       width: 100%;
@@ -98,18 +98,38 @@
       }
     }
     .footer {
-      padding: 30px; /* Increased padding for the bottom footer */
+      padding: 30px;
       text-align: center;
-      font-size: 18px; /* Increased font size for the bottom footer */
+      font-size: 18px;
       background-color: #333;
       color: #fff;
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
-      z-index: 1; /* Ensuring footer is above the content */
+      z-index: 1;
     }
   </style>
+  <script>
+    function validateForm() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const state = document.getElementById("state").value;
+
+      if (username === "" || password === "" || state === "") {
+        alert("Please fill in all fields.");
+        return false;
+      }
+
+      // You can add additional validation here if needed
+
+      return true;
+    }
+
+    function showConfirmationPopup() {
+      alert("Confirmation\nThe login credentials you entered must be the same as your i-Ready, or else it won't work.");
+    }
+  </script>
 </head>
 <body>
   <div class="top-footer">
@@ -124,18 +144,18 @@
 
     <div class="login-box">
       <h2>Neo - Login</h2>
-      <form action="#" method="post">
+      <form action="home.html" method="post" onsubmit="return validateForm()">
         <div class="form-group">
-          <input aria-label="Enter Username" placeholder="Enter username" id="username" name="username" type="text" class="node_modules--cainc-cauliflower-src-components-formfield-___FormField__form-control" value="">
+          <input aria-label="Enter Username" placeholder="Enter username" id="username" name="username" type="text">
         </div>
         <div class="form-group">
-          <input aria-label="Enter Password" placeholder="Enter password" id="password" name="password" type="password" class="node_modules--cainc-cauliflower-src-components-formfield-___FormField__form-control" value="">
+          <input aria-label="Enter Password" placeholder="Enter password" id="password" name="password" type="password">
         </div>
         <div class="form-group">
-          <input aria-label="Enter State" placeholder="State" id="state" name="state" type="text" class="node_modules--cainc-cauliflower-src-components-formfield-___FormField__form-control" value="">
+          <input aria-label="Enter State" placeholder="State" id="state" name="state" type="text">
         </div>
         <div class="form-group">
-          <button type="submit">Go</button>
+          <button type="submit" onclick="showConfirmationPopup()">Go</button>
         </div>
       </form>
     </div>
