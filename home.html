@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neo - Home</title>
   <style>
-    body {
+ body {
       background-image: url('https://i.redd.it/ddnm7kmznqd71.gif');
       background-size: cover;
       background-repeat: no-repeat;
@@ -199,7 +199,7 @@
   </div>
 
   <div class="floating-container">
-    <span class="user-name" id="username-coin"></span>
+    <span class="user-name">John Doe</span>
     <img class="coin-icon" src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3410665/yellow-coin-icon-sm.png" alt="Coin Icon">
   </div>
 
@@ -245,14 +245,5 @@
       <img class="games-icon" src="https://tinypic.host/images/2023/07/29/imageb7c44fb028fca566.png" alt="Games Icon"> Games
     </a>
   </div>
-
-  <script>
-    // JavaScript code to set the username on the home page
-    document.addEventListener("DOMContentLoaded", function() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const username = urlParams.get('username');
-      document.getElementById('username-coin').textContent = username;
-    });
-  </script>
 </body>
 </html>
